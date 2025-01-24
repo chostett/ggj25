@@ -1,2 +1,2 @@
-# ggj25
-Team Bubble Butt's Repository for Global Game Jam 2025 - Theme: Bubble
+# Bubble Butt: The Game
+...why is everyone mean to me :C
