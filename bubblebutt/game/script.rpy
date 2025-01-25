@@ -28,6 +28,8 @@ image bubble flat = "BB_FlatNeutral.png"
 image bubble neutral = "BB_Neutral.png"
 image bubble bored = "BB_Bored.png"
 image fairy neutral = "Bubbilina_Neutral.png"
+image fairy happy = "Bubbilina_Happy.png"
+image fairy mis = "Bubbilina_Mischievous.png"
 
 init:
 # Sprite Positions
@@ -85,13 +87,22 @@ label start:
 
     m "Whaaaaaaa?! Who are you? What are you? Why are you here?"
 
+    hide fairy neutral
+    show fairy happy at right
+
     a "My name is Bubbleina. I've been sent here to give you that well-rounded life you seek..."
+
+    hide fairy happy
+    show fairy neutral at right
 
     m "Did... did you hear my wishes? Can you really help me out?"
 
     # show Bubbleina mischievous
 
     play sound "audio/a_happy.ogg" volume 1.0
+
+    hide fairy neutral
+    show fairy happy at right
 
     a "Bubblenia Of course I can! All it takes is a wave of my wand and a..."
 
@@ -105,11 +116,16 @@ label start:
 
     # show Bubbleina mischievous
 
+    hide fairy happy
+    show fairy mis at right
+
     a "...mumble mumble big mumble mumble butt mumble mumble..."
 
     hide bubble flat
+    hide fairy mis
 
     show bubble neutral at left
+    show fairy happy at right
 
     m "Something feels bigger...more cushiony...wait...it's my butt!"
 
@@ -120,6 +136,9 @@ label start:
     # show Bubbleina mischievous
 
     play sound "audio/a_evil.ogg" volume 1.0
+    
+    hide fairy happy
+    show fairy mis at right
 
     a "I'm sorry, is this not what you asked for? You wanted a well-rounded life and I gave it to you!"
     
@@ -293,9 +312,8 @@ label start:
         jump choice3
     
     label choice3:
-        # scene city street 3
-
-        # show BB neutral
+        scene street3
+        show bubble neutral at left
 
         "Even after all that, our protagonist is starting to panic."
 
