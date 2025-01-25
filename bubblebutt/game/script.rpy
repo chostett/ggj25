@@ -71,6 +71,8 @@ label start:
 
     show bubble flat at left
 
+    play sound "audio/a_happy.ogg" volume 1.0
+
     a "Did I hear someone say {i}well-rounded?{/i} I can make that happen you know."
 
     play sound "audio/b_what.ogg" volume 1.0
@@ -82,6 +84,8 @@ label start:
     m "Did... did you hear my wishes? Can you really help me out?"
 
     # show Bubbleina mischievous
+
+    play sound "audio/a_happy.ogg" volume 1.0
 
     a "Bubblenia Of course I can! All it takes is a wave of my wand and a..."
 
@@ -109,6 +113,8 @@ label start:
 
     # show Bubbleina mischievous
 
+    play sound "audio/a_evil.ogg" volume 1.0
+
     a "I'm sorry, is this not what you asked for? You wanted a well-rounded life and I gave it to you!"
     
     a "...in curse form!"
@@ -120,6 +126,8 @@ label start:
     # show Bubbleina happy
 
     a "That's up to you to find out!"
+
+    play sound "audio/a_evil.ogg" volume 1.0
     
     a "By the way, you have 24 hours to figure this out or that big bouncy bubble butt of yours stays with you forever soooooooo good luck!"
 
