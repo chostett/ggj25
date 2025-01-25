@@ -42,7 +42,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    play music "audio/neutral.mp3" volume 0.5
+    play music "audio/neutral.mp3" volume 0.4
 
     scene bedroom cutscene
 
@@ -148,7 +148,11 @@ label start:
 
     # show Illustration 1
 
+    play sound "audio/OMG.ogg" volume 2.0
+
     p1 "Oh my god, look at their butt!"
+
+    play sound "audio/Cake.ogg" volume 2.0
 
     p2 "Are you a bakery? Cuz that's some serious cake son!"
 
@@ -156,7 +160,7 @@ label start:
 
     b "Oh my god they're all looking at me. I can't hide this thing!"
 
-    play sound "audio/b_sigh.ogg" volume 1.0
+    play sound "audio/MeanLaugh.ogg" volume 2.0
     
     b "Everyone is so mean to me! What am I going to do?"
 
@@ -245,7 +249,11 @@ label start:
         
         o "You saved me. You and your... big butt."
 
+        play sound "audio/Hero.ogg" volume 2.5
+
         p1 "That young person's butt saved that woman. They're a true hero!"
+
+        play sound "audio/VOD.ogg" volume 2.0
 
         p2 "Yo, who's got the VOD?"
 
