@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 65: invalid syntax
-    "audio/neutral.mp3" volume 0.5
-                         ^
+File "game/script.rpy", line 44: expected end of line
+    play music "audio/neutral.mp3" fadein volume 0.5
+                                                 ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Jan 25 20:00:05 2025
+Sat Jan 25 20:28:17 2025
