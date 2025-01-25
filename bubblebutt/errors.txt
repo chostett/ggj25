@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 40: expected statement.
-    realName = "Naoto"
-             ^
+File "game/options.rpy", line 65: invalid syntax
+    "audio/neutral.mp3" volume 0.5
+                         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Jan 25 14:01:55 2025
+Sat Jan 25 20:00:05 2025

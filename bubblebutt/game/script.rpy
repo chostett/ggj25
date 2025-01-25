@@ -18,12 +18,26 @@ define p2 = Character("Random Person 2")
 image bedroom cutscene = "cutscene_bedroom_good.png"
 image bedroom good = "bedroom_good.png"
 
+# Declaring sprite names.
+
+image bubble flat = "BB_FlatNeutral.png"
+image bubble neutral = "BB_Neutral.png"
+
+init:
+# Sprite Positions
+    define center = Position(xalign=0.5)
+    define left = Position(xalign=0.2)
+    define right = Position(xalign=0.8)
+    define centerleft = Position(xalign=0.4)
+
 
 # The game starts here.
 
 label start:
     $ goodEnd = 0
     $ badEnd = 0
+
+    play music "audio/neutral.mp3" volume 0.5
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -48,11 +62,17 @@ label start:
 
     # show instagram scene
 
+    play voice "audio/b_ooh.wav" volume 1.0
+
     m "Look at her, I wish I was with her. My life would be so much better, more well-rounded you know?"
 
-    # show BB surprised and Bubbleina happy
+    scene bedroom good
+
+    show bubble flat at left
 
     a "Did I hear someone say {i}well-rounded?{/i} I can make that happen you know."
+
+    play sound "audio/b_what.wav"
 
     m "Whaaaaaaa?! Who are you? What are you? Why are you here?"
 
@@ -70,17 +90,19 @@ label start:
 
     a "words..."
 
-    # show BB determined
-
     m "Then do it! Give me the well-rounded life I crave!"
 
     # show Bubbleina mischievous
 
     a "...mumble mumble big mumble mumble butt mumble mumble..."
 
-    # show BB surprised
+    hide bubble flat
+
+    show bubble neutral at left
 
     m "Something feels bigger...more cushiony...wait...it's my butt!"
+
+    play sound "audio/b_what.wav"
     
     m "It's huge! What did you do to it?!"
 
@@ -105,6 +127,8 @@ label start:
     a "Or should I say..."
 
     a "BubbleButt!"
+
+    play sound "audio/b_no.wav"
 
     b "Nooooooooooo!"
 
