@@ -7,6 +7,11 @@ define m = Character("[realName]")
 define b = Character("BubbleButt")
 define l = Character("Bubleigh")
 
+# Declaring scene names.
+
+image bedroom cutscene = "cutscene_bedroom_good.png"
+image bedroom good = "bedroom_good.png"
+
 
 # The game starts here.
 
@@ -18,13 +23,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
+    scene bedroom cutscene
 
     # These display lines of dialogue.
 
@@ -42,6 +41,8 @@ label start:
     m "Oh yeah...[realName]. I haven't heard that name in ages."
 
     b "Most people call me BubbleButt."
+
+    scene bedroom good
 
     "Choice 1..."
 
