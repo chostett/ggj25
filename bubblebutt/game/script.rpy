@@ -164,7 +164,7 @@ label start:
         
         b "I can't do this. I can't go outside again. I need to go back."
         
-        b "I can never show my face again. I'm going home!"
+        b "I can never show my cheeks again. I'm going home!"
 
         jump choice2
     
@@ -258,7 +258,7 @@ label start:
 
         b "..."
 
-        s "We need your help, we its a matter of national security."
+        s "We need your help, its a matter of national security."
 
         b "Are you kidding me? How could someone like me help you out?"
 
