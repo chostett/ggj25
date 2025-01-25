@@ -17,6 +17,8 @@ define p2 = Character("Random Person 2")
 
 image bedroom cutscene = "cutscene_bedroom_good.png"
 image bedroom good = "bedroom_good.png"
+image street1 = "street_1.png"
+image street2 = "street_2.png"
 
 # Declaring sprite names.
 
@@ -141,8 +143,8 @@ label start:
 
     b "Nooooooooooo!"
 
-    # scene city street
-    # show BB neutral
+    scene street1
+    show bubble bored at left
 
     b "I'm so glad I had my stretchy pants."
     
@@ -214,8 +216,8 @@ label start:
         jump choice2
     
     label choice2:
-        #scene city street 2
-        # show BB neutral
+        scene street2
+        show bubble neutral at left
 
         "On their way down the street, our bootylicious protagonist stops to think."
 

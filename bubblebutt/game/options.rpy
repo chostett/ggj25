@@ -30,11 +30,15 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+Written for Global Game Jam 2025, from Jan 24th - 26th. Theme: Bubble.
+
+Credits
+
 Writer: Kyle
 
-Artist/Voice Acting: Ceren
+Illustrations/Voice Acting: Ceren
 
-Artist/Programmer/Voice Acting: CJ
+Illustrations/Programming/Voice Acting: CJ
 
 Thank you to Jonny_Cache, mabbees, and Shane for your lovely voices.
 """)
