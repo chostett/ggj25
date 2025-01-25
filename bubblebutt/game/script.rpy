@@ -16,9 +16,11 @@ define p2 = Character("Random Person 2")
 # Declaring scene names.
 
 image bedroom cutscene = "cutscene_bedroom_good.png"
-image bedroom good = "bedroom_good.png"
+image bedroom good = "bedroom.png"
+image bedroom bad = "bedroom_bad.png"
 image street1 = "street_1.png"
 image street2 = "street_2.png"
+image street3 = "street_3.png"
 
 # Declaring sprite names.
 
