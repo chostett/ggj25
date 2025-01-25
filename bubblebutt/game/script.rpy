@@ -6,7 +6,7 @@
 define m = Character("[realName]")
 define b = Character("BubbleButt")
 define l = Character("Bubleigh")
-define a = Character("Bubblina")
+define a = Character("Bubbilina")
 define o = Character("Elderly Woman")
 define s = Character("Agent")
 define p1 = Character("Random Person 1")
@@ -25,6 +25,7 @@ image street2 = "street_2.png"
 image bubble flat = "BB_FlatNeutral.png"
 image bubble neutral = "BB_Neutral.png"
 image bubble bored = "BB_Bored.png"
+image fairy neutral = "Bubbilina_Neutral.png"
 
 init:
 # Sprite Positions
@@ -72,6 +73,7 @@ label start:
     scene bedroom good
 
     show bubble flat at left
+    show fairy neutral at right
 
     play sound "audio/a_happy.ogg" volume 1.0
 
