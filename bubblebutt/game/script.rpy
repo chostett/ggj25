@@ -22,6 +22,7 @@ image bedroom good = "bedroom_good.png"
 
 image bubble flat = "BB_FlatNeutral.png"
 image bubble neutral = "BB_Neutral.png"
+image bubble bored = "BB_Bored.png"
 
 init:
 # Sprite Positions
