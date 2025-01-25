@@ -6,6 +6,12 @@
 define m = Character("[realName]")
 define b = Character("BubbleButt")
 define l = Character("Bubleigh")
+define a = Character("Bubblina")
+define o = Character("Elderly Woman")
+define s = Character("Agent")
+define p1 = Character("Random Person 1")
+define p2 = Character("Random Person 2")
+
 
 # Declaring scene names.
 
@@ -27,83 +33,241 @@ label start:
 
     # These display lines of dialogue.
 
-    "I was born with a thicc juicy butt."
+    "Our main protagonist: bored with life, filled with zero aspirations, and nothing to contribute endlessly scrolls through social media, looking at nothing in particular."
 
-    "I don't understand why people make fun of me."
+    "Maybe you, dear reader, know someone like this."
 
     python:
-        realName = renpy.input("What's my name again?", length=25)
+        realName = renpy.input("What is their name?", length=25)
         realName = realName.strip()
 
         if not realName:
             realName = "Naoto"
 
-    m "Oh yeah...[realName]. I haven't heard that name in ages."
+    m "Life is so.... boring and pointless! I wish I was literally something else, someone else."
 
-    b "Most people call me BubbleButt."
+    # show instagram scene
 
-    scene bedroom good
+    m "Look at her, I wish I was with her. My life would be so much better, more well-rounded you know?"
 
-    "Choice 1..."
+    # show BB surprised and Bubbleina happy
+
+    a "Did I hear someone say {i}well-rounded?{/i} I can make that happen you know."
+
+    m "Whaaaaaaa?! Who are you? What are you? Why are you here?"
+
+    a "My name is Bubbleina. I've been sent here to give you that well-rounded life you seek..."
+
+    m "Did... did you hear my wishes? Can you really help me out?"
+
+    # show Bubbleina mischievous
+
+    a "Bubblenia Of course I can! All it takes is a wave of my wand and a..."
+
+    a "Few"
+
+    a "{i}magic{/i}"
+
+    a "words..."
+
+    # show BB determined
+
+    m "Then do it! Give me the well-rounded life I crave!"
+
+    # show Bubbleina mischievous
+
+    a "...mumble mumble big mumble mumble butt mumble mumble..."
+
+    # show BB surprised
+
+    m "Something feels bigger...more cushiony...wait...it's my butt!"
+    
+    m "It's huge! What did you do to it?!"
+
+    # show Bubbleina mischievous
+
+    a "I'm sorry, is this not what you asked for? You wanted a well-rounded life and I gave it to you!"
+    
+    a "...in curse form!"
+
+    # show BB surprised
+
+    m "But how am I supposed to do that with this giant butt?!"
+
+    # show Bubbleina happy
+
+    a "That's up to you to find out!"
+    
+    a "By the way, you have 24 hours to figure this out or that big bouncy bubble butt of yours stays with you forever soooooooo good luck!"
+
+    a "...[realName],"
+
+    a "Or should I say..."
+
+    a "BubbleButt!"
+
+    b "Nooooooooooo!"
+
+    # scene city street
+    # show BB neutral
+
+    b "I'm so glad I had my stretchy pants."
+    
+    b "Now to get out and figure out how to stop this stupid curse and shrink my stupid butt back back down to normal."
+
+    # show BB determined
+
+    b "Ok, just act normal. You don't have a giant dumpy attached to you. Just keep walking everything is cool."
+
+    # show Illustration 1
+
+    p1 "Oh my god, look at their butt!"
+
+    p2 "Are you a bakery? Cuz that's some serious cake son!"
+
+    # show BB sad/defeated
+
+    b "Oh my god they're all looking at me. I can't hide this thing!"
+    
+    b "Everyone is so mean to me! What am I going to do?"
+
+    # Choice 1...
 
     menu:
-        "Yes":
+        "Blow them off":
             $ goodEnd += 1
             jump good1
 
-        "No":
+        "Take their words to heart":
             $ badEnd += 1
             jump bad1
     
     label good1:
-        b "I think I made a good choice."
+        # show BB determined 
 
-        b "Now onto choice two..."
+        b "Wait why do I care?"
+        
+        b "I don't even know them, I'll probably never even see them again? I've got bigger things to worry about."
+
+        # show BB happy
+
+        b "Yeah that's right, it's my butt and its a big one!"
+        
+        b "Keep laughing, take pics! Don't forget to tag me though!"
 
         jump choice2
 
     label bad1:
-        b "I think I made a bad choice."
+        # show BB sad
 
-        b "Now onto choice two..."
+        b "They think i'm a freak! A big caked up bootylicious freak."
+        
+        b "I can't do this. I can't go outside again. I need to go back."
+        
+        b "I can never show my face again. I'm going home!"
 
         jump choice2
     
     label choice2:
-        "Choice 2..."
+        #scene city street 2
+        # show BB neutral
+
+        "On their way down the street, our bootylicious protagonist stops to think."
+
+        b "Well-rounded life... well-rounded. I mean I got that but how can I make my life fulfilled in 24 hours?"
+        
+        b "This sucks, this is booty cheeks... literally."
+
+        # scene illustration 2
+        #show BB surprised
+
+        "And what a sight! A nearsighted elderly woman, crossing the street..."
+        
+        "But that car is speeding right through that signal!"
+
+        b "Hey lady what are you doing?! That car's not stopping!!! Oh god someone help!"
+
+        p1 "Somebody save that poor woman!"
+
+        # Choice 2...
 
     menu:
-        "Yes":
+        "Stop it with your cheeks":
             $ goodEnd += 1
             jump good2
         
-        "No":
+        "It's someone else's problem!":
             $ badEnd += 1
             jump bad2
     
     label good2:
-        b "I think I made a good choice."
+        # show BB determined
+        b "Stop the carrrrrrrr!!!!! Work butt work!"
 
-        b "Now onto choice three..."
+        o "Young man...lady...sir. Thank you!"
+        
+        o "You saved me. You and your... big butt."
+
+        p1 "That young person's butt saved that woman. They're a true hero!"
+
+        p2 "Yo, who's got the VOD?"
 
         jump choice3
 
     label bad2:
-        b "I think I made a bad choice."
+        b "I can't do it!"
+        
+        b "I'm sorry!! Someone else help her please!"
 
-        b "Now onto choice three..."
+        p1 "The car stopped thank god."
+        
+        p2 "You were {i}right{/i} there. What the heck?"
+
+        o "Thanks for nothing! Especially you Cheeks McGee!"
+
+        b "I'm so useless..."
 
         jump choice3
     
     label choice3:
-        "Choice 3..."
+        # scene city street 3
+
+        # show BB neutral
+
+        "Even after all that, our protagonist is starting to panic."
+
+        b "I'm running out of time! I need to figure out how to break the curse."
+        
+        b "I take back everything I said! I just want things to be normal again!"
+
+        b "I wanna be [realName] again!"
+
+        # show Illustration 3
+
+        "A black car pulls up. BubbleButt is surprised when two men dressed in black suits approach them. They look serious."
+
+        s "Are you the citizen with the butt? The big one."
+
+        # show BB surprised
+
+        b "I uh, I guess that's me. Unless there's a bigger butt around here but I doubt that..."
+
+        b "Word gets around fast huh..."
+
+        s "Was that supposed to be a joke?"
+
+        b "..."
+
+        s "We need your help, we its a matter of national security."
+
+        b "Are you kidding me? How could someone like me help you out?"
 
     menu: 
-        "Yes":
+        "Stop the assteroid and save the world":
             $ goodEnd += 1
             jump good3
 
-        "No":
+        "On second thought...":
             $ badEnd += 1
             jump bad3
     
