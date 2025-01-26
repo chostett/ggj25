@@ -24,6 +24,7 @@ image bedroom bad = "bedroom_bad.png"
 image street1 = "street_1.png"
 image street2 = "street_2.png"
 image street3 = "street_3.png"
+image endscreen = "EndScreen.jpg"
 
 # Declaring sprite names.
 
@@ -715,5 +716,9 @@ label start:
 
     # This ends the game.
     label end:
+
+        scene endscreen
+
+        "Thank you for playing our game! - Kyle, Ceren & CJ"
 
     return
