@@ -18,6 +18,7 @@ define sc = Character("Important Scientist")
 # Declaring scene names.
 
 image bedroom cutscene = "cutscene_bedroom_good.png"
+image instagram = "instagram.png"
 image bedroom good = "bedroom.png"
 image bedroom bad = "bedroom_bad.png"
 image street1 = "street_1.png"
@@ -29,9 +30,14 @@ image street3 = "street_3.png"
 image bubble flat = "BB_FlatNeutral.png"
 image bubble neutral = "BB_Neutral.png"
 image bubble bored = "BB_Bored.png"
+image bubble surprised = "BB_Surprised.png"
+image bubble sad = "BB_Sad.png"
+image bubble happy = "BB_Happy.png"
+image bubble determined = "BB_Determined.png"
 image fairy neutral = "Bubbilina_Neutral.png"
 image fairy happy = "Bubbilina_Happy.png"
 image fairy mis = "Bubbilina_Mischievous.png"
+image leigh = "Bubbleigh_Neutral.png"
 image agents = "Agents_Neutral.png"
 
 # Define audio for ease of calling later. A = Bubbilina, B = BubbleButt/Player, l = Bubbleigh, p = Random People.
@@ -101,6 +107,7 @@ label start:
 
     # show instagram scene
 
+    scene instagram
     play sound b_ooh volume 1.2
 
     m "Look at her, I wish I was with her. My life would be so much better, more well-rounded you know?"
@@ -129,8 +136,6 @@ label start:
 
     m "Did... did you hear my wishes? Can you really help me out?"
 
-    # show Bubbleina mischievous
-
     play sound a_happy volume 1.2
 
     hide fairy neutral
@@ -146,8 +151,6 @@ label start:
 
     m "Then do it! Give me the well-rounded life I crave!"
 
-    # show Bubbleina mischievous
-
     hide fairy happy
     show fairy mis at right
     play sound sparklesout volume 1.0
@@ -157,7 +160,7 @@ label start:
     hide bubble flat
     hide fairy mis
 
-    show bubble neutral at left
+    show bubble surprised at left
     show fairy happy at right
 
     m "Something feels bigger...more cushiony...wait...it's my butt!"
@@ -166,22 +169,23 @@ label start:
     
     m "It's huge! What did you do to it?!"
 
-    # show Bubbleina mischievous
-
     play sound a_evil volume 1.2
     
     hide fairy happy
     show fairy mis at right
 
+    hide bubble surprised
+    show bubble bored at left
+
     a "I'm sorry, is this not what you asked for? You wanted a well-rounded life and I gave it to you!"
     
     a "...in curse form!"
 
-    # show BB surprised
-
     m "But how am I supposed to do that with this giant butt?!"
 
     # show Bubbleina happy
+    hide fairy mis 
+    show fairy happy at right
 
     a "That's up to you to find out!"
 
@@ -191,11 +195,16 @@ label start:
 
     a "...[realName],"
 
+    hide fairy happy 
+    show fairy mis at right
+
     a "Or should I say..."
 
     a "BubbleButt!"
 
     play sound b_no volume 1.2
+    hide bubble bored 
+    show bubble sad at left
 
     b "Nooooooooooo!"
 
@@ -206,7 +215,8 @@ label start:
     
     b "Now to get out and figure out how to stop this stupid curse and shrink my stupid butt back back down to normal."
 
-    # show BB determined
+    hide bubble bored 
+    show bubble determined at left
 
     play sound b_sigh volume 1.2
 
@@ -215,6 +225,8 @@ label start:
     # show Illustration 1
 
     play sound p_omg volume 2.0
+    hide bubble determined
+    show bubble surprised at left
 
     p1 "Oh my god, look at their butt!"
 
@@ -222,7 +234,8 @@ label start:
 
     p2 "Are you a bakery? Cuz that's some serious cake son!"
 
-    # show BB sad/defeated
+    hide bubble surprised
+    show bubble sad at left
 
     b "Oh my god they're all looking at me. I can't hide this thing!"
 
@@ -242,13 +255,15 @@ label start:
             jump bad1
     
     label good1:
-        # show BB determined 
+        hide bubble sad
+        show bubble determined at left 
 
         b "Wait why do I care?"
         
         b "I don't even know them, I'll probably never even see them again? I've got bigger things to worry about."
-
-        # show BB happy
+        
+        hide bubble determined 
+        show bubble happy at left
 
         play sound b_haha volume 1.2
 
@@ -259,7 +274,6 @@ label start:
         jump choice2
 
     label bad1:
-        # show BB sad
 
         b "They think i'm a freak! A big caked up bootylicious freak."
 
@@ -268,6 +282,8 @@ label start:
         b "I can't do this. I can't go outside again. I need to go back."
         
         b "I can never show my cheeks again. I'm going home!"
+
+        hide bubble sad
 
         jump choice2
     
@@ -283,8 +299,8 @@ label start:
         
         b "This sucks, this is booty cheeks... literally."
 
-        # scene illustration 2
-        #show BB surprised
+        hide bubble neutral
+        show bubble surprised at left
 
         "And what a sight! A nearsighted elderly woman, crossing the street..."
 
@@ -310,15 +326,18 @@ label start:
             jump bad2
     
     label good2:
-        # show BB determined
+        hide bubble surprised
+        show bubble determined at left
         play sound crash volume 1.2
-        
+
         b "Stop the carrrrrrrr!!!!! Work butt work!"
 
         o "Young man...lady...sir. Thank you!"
         
         o "You saved me. You and your... big butt."
 
+        hide bubble determined
+        show bubble happy at left
         play sound p_hero volume 2.5
 
         p1 "That young person's butt saved that woman. They're a true hero!"
@@ -326,10 +345,13 @@ label start:
         play sound p_vod volume 2.0
 
         p2 "Yo, who's got the VOD?"
+        hide bubble happy
 
         jump choice3
 
     label bad2:
+        hide bubble surprised
+        show bubble sad at left
         play sound b_no volume 1.2
 
         b "I can't do it!"
@@ -342,27 +364,30 @@ label start:
 
         o "Thanks for nothing! Especially you Cheeks McGee!"
 
+        hide bubble sad
+        show bubble bored at left
         play sound b_sigh volume 1.2
 
         b "I'm so useless..."
+        hide bubble bored
 
         jump choice3
     
     label choice3:
         scene street3
-        show bubble neutral at left
+        show bubble surprised at left
 
         "Even after all that, our protagonist is starting to panic."
 
         b "I'm running out of time! I need to figure out how to break the curse."
 
         play sound b_sigh volume 1.2
+        hide bubble surprised 
+        show bubble sad at left
         
         b "I take back everything I said! I just want things to be normal again!"
 
         b "I wanna be [realName] again!"
-
-        # show Illustration 3
 
         "A black car pulls up. BubbleButt is surprised when two men dressed in black suits approach them. They look serious."
 
@@ -370,7 +395,8 @@ label start:
 
         s "Are you the citizen with the butt? The big one."
 
-        # show BB surprised
+        hide bubble sad
+        show bubble surprised at left
 
         play sound b_hm volume 1.2
 
@@ -388,6 +414,8 @@ label start:
         b "How? I know it's big and perfectly round and honestly looks pretty good on me, but how can that help out?"
 
         show agents at right
+        hide bubble surprised
+        show bubble neutral at left
 
         p "Call Hello, good citizen."
         
@@ -397,7 +425,8 @@ label start:
         
         p "Will you help us? Will you help your country?"
 
-        # Show BB surprised
+        hide bubble neutral
+        show bubble surprised at left
 
         play sound b_what volume 1.2
 
@@ -421,8 +450,8 @@ label start:
             jump bad3
     
     label good3:
-        play sound "audio/b_haha.ogg" volume 1.0
-
+        hide bubble surprised 
+        show bubble determined at left
         play sound b_haha volume 1.2
 
         b "Mr. President my butt is in position. I'm ready to take on the incoming assteroid."
@@ -437,7 +466,8 @@ label start:
         
         sc "The asteroid has made contact with both left and right cheeks and has been destroyed. We're saved!"
 
-        # Show BB happy
+        hide bubble determined
+        show bubble happy at left
 
         play sound b_haha volume 1.2
 
@@ -446,14 +476,19 @@ label start:
         p "Indeed you are! Stand up, let the nation see you!"
 
         play sound b_sigh volume 1.2
+        hide bubble happy
+        show bubble bored at left
 
         b "Stand up...not for a while. Give me a minute..."
 
         hide agents
+        hide bubble bored
 
         jump final
     
     label bad3:
+        hide bubble surprised
+        show bubble sad at left
         play sound b_sigh volume 1.2
 
         b "Mr. President I'm sorry, I'm so sorry. I just can't!"
@@ -471,6 +506,7 @@ label start:
         p "It appears the power of booty has let us and our nation down yet again. I bet I get blamed for this."
 
         hide agents
+        hide bubble sad
 
         jump final
     
@@ -478,7 +514,7 @@ label start:
 
         scene bedroom good 
 
-        show bubble neutral at left
+        show bubble bored at left
             
         b "I'm so tired! My poor butt has butted into so many adventures today but it's still them."
         
@@ -491,12 +527,15 @@ label start:
         
         a "Life must be so hard having a perfectly shaped bubble butt. You're the real hero here."
 
-        # Show BB surprised
+        hide bubble bored
+        show bubble surprised at left
 
         b "You! You turned my behind into a badonkadonk! I want my basic behind back!"
 
         hide fairy happy 
         show fairy mis at right
+        hide bubble surprised
+        show bubble bored at left
 
         a "Well why do you think I'm here? To ogle my handiwork?"
         
@@ -512,11 +551,15 @@ label start:
         b "Can I just say before you judge that I..."
 
         a "Nope! Be quiet now!"
+        hide fairy happy
+        hide bubble bored
 
         if goodEnd > badEnd:
             stop music
 
-            play music good fadein 1
+            show fairy happy at right
+            show bubble happy at left
+            play music good volume 0.4
 
             a "I'm very proud of you!"
             
@@ -528,7 +571,8 @@ label start:
 
             a "Your name is now restored, [realName]. "
 
-            # Show BB determined
+            hide bubble happy
+            show bubble determined at left
 
             m "Thank you. I think I'll..."
 
@@ -541,26 +585,34 @@ label start:
                     m "Yes yes please!"
                     jump returnButt
         else:
+            scene bedroom bad
             stop music
-
-            play music bad fadein 1
-
-            scene bedroom good
+            show fairy mis at right
+            show bubble sad at left
+            play music bad volume 0.4
             
             a "You really didn't learn anything did you? I gave you 24 hours and you couldn't learn one simple lesson?"
 
             jump theBadEnd
     
     label keepButt:
+        hide fairy happy
+        show fairy mis at right
         a "Wat?"
         
+        hide bubble determined
+        show bubble happy at left
+
         m "I feel like during my time with this bubble butt, I learned that accepting who I was was a big part of being happy and finding fulfillment in life."
         
         m "I want the world to know that yes! This is who I am and that doesn't stop me from being happy!"
         
         a "Well if that's what you truly want, sure! Enjoy! Less work for me."
+
+        hide fairy mis
+        show fairy happy at right
         
-        a "Live your life to the fullest and don’t forget to tag me on Insta!"
+        a "Live your life to the fullest and don't forget to tag me on Insta!"
 
         m "Thank you Bubbleina! Thank you for showing me that life is truly booty-ful."
         
@@ -569,6 +621,11 @@ label start:
         jump end
     
     label returnButt:
+        hide fairy happy
+        show fairy mis at right
+        hide bubble determined
+        show bubble happy at left
+
         m "I'm ready to fit in chairs again! I WANT TO BE FREEEEEEEEEEEEEEE"
 
         play sound sparklesout volume 1.0
@@ -577,17 +634,28 @@ label start:
 
         a "Your big cursed bouncy behind is no more. Go forth and be happy."
 
+        hide fairy mis
+        show fairy happy at right
+        hide bubble happy
+        show bubble flat at left
+
         m "I'm going to go live my life! There's still time in the day."
         
         m "I need to take a walk with a new center of gravity again."
 
         scene street1
+        show bubble flat at left
+        show leigh at right
+
+        play sound l_ooh volume 2.0
 
         l "Um excuse me, hi um, are you that hero the president is talking about on TV?"
 
         m "Depends on who is asking..."
         
         m "Wait are you?!"
+
+        play sound l_laugh volume 2.0
 
         l "Yes! It is me, the one and only big booty influencer and number 2 MOBA influencer in the world, Bubbleigh_Boughtie."
         
@@ -602,6 +670,8 @@ label start:
         l "I was wondering if you were free to go...on...a date with me?"
         
         l "I think you're really cool and want to get to know you better."
+
+        play sound l_ooh volume 2.0
 
         m "I mean uh, well, guh, ooohh weee, if you'd like to, then sure!"
 
@@ -623,7 +693,7 @@ label start:
         
         a "I mean that 100 percent, 1,000 percent!"
 
-        scene bedroom bad
+        hide fairy mis
 
         b "The world has become dark."
         
