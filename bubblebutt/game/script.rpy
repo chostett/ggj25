@@ -565,6 +565,8 @@ label start:
         
         m "I need to take a walk with a new center of gravity again."
 
+        scene street1
+
         l "Um excuse me, hi um, are you that hero the president is talking about on TV?"
 
         m "Depends on who is asking..."
