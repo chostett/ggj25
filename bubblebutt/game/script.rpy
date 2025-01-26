@@ -52,6 +52,11 @@ define audio.meanlaugh = "audio/MeanLaugh.ogg"
 define audio.p_omg = "audio/OMG.ogg"
 define audio.p_vod = "audio/VOD.ogg"
 
+define audio.car = "audio/car.ogg"
+define audio.crash = "audio/crash.ogg"
+define audio.sparklesin = "audio/FairySparkles1.ogg"
+define audio.sparklesout = "audio/FairySparkles2.ogg"
+
 # Define songs - good end, bad end and neutral.
 define audio.bad = "audio/bad.mp3"
 define audio.good = "audio/good.mp3"
@@ -104,8 +109,7 @@ label start:
 
     show bubble flat at left
     show fairy neutral at right
-
-    play sound a_happy volume 1.2
+    play sound sparklesin volume 1.0
 
     a "Did I hear someone say {i}well-rounded?{/i} I can make that happen you know."
 
@@ -115,6 +119,8 @@ label start:
 
     hide fairy neutral
     show fairy happy at right
+
+    play sound a_happy volume 1.2
 
     a "My name is Bubbleina. I've been sent here to give you that well-rounded life you seek..."
 
@@ -144,6 +150,7 @@ label start:
 
     hide fairy happy
     show fairy mis at right
+    play sound sparklesout volume 1.0
 
     a "...mumble mumble big mumble mumble butt mumble mumble..."
 
@@ -280,6 +287,8 @@ label start:
         #show BB surprised
 
         "And what a sight! A nearsighted elderly woman, crossing the street..."
+
+        play sound car volume 1.0
         
         "But that car is speeding right through that signal!"
 
@@ -302,6 +311,8 @@ label start:
     
     label good2:
         # show BB determined
+        play sound crash volume 1.2
+        
         b "Stop the carrrrrrrr!!!!! Work butt work!"
 
         o "Young man...lady...sir. Thank you!"
@@ -418,6 +429,8 @@ label start:
 
         p "God speed good citizen. The whole nation looks upon you and your patriotic posterior."
 
+        play sound crash volume 1.2
+
         sc "We have impact!"
         
         sc "It's...a success!!"
@@ -471,6 +484,7 @@ label start:
         
         b "I guess I'm gonna be stuck with this thing forever. I gotta buy new jeans now."
 
+        play sound sparklesin volume 1.0
         show fairy happy at right
 
         a "Oh the problems of the one percent!"
@@ -556,6 +570,8 @@ label start:
     
     label returnButt:
         m "I'm ready to fit in chairs again! I WANT TO BE FREEEEEEEEEEEEEEE"
+
+        play sound sparklesout volume 1.0
 
         a "mumble mumble disappear butt mumble mumble back to basics"
 
