@@ -18,6 +18,7 @@ define sc = Character("Important Scientist")
 # Declaring scene names.
 
 image bedroom cutscene = "cutscene_bedroom_good.png"
+image bedroom cutscene bad = "cutscene_bedroom_bad.png"
 image instagram = "instagram.png"
 image bedroom good = "bedroom.png"
 image bedroom bad = "bedroom_bad.png"
@@ -695,6 +696,7 @@ label start:
         a "I mean that 100 percent, 1,000 percent!"
 
         hide fairy mis
+        scene bedroom cutscene bad
 
         b "The world has become dark."
         
