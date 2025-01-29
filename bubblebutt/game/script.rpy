@@ -5,7 +5,7 @@
 
 define m = Character("[realName]")
 define b = Character("BubbleButt")
-define l = Character("Bubleigh", who_color="#e44519")
+define l = Character("Bubbleigh", who_color="#e44519")
 define a = Character("Bubbilina", who_color="#9010eb")
 define o = Character("Elderly Woman", who_color="#4d485f")
 define s = Character("Agent", who_color="#139d4d")
@@ -131,7 +131,7 @@ label start:
 
     play sound a_happy volume 1.2
 
-    a "My name is Bubbleina. I've been sent here to give you that well-rounded life you seek..."
+    a "My name is Bubbilina. I've been sent here to give you that well-rounded life you seek..."
 
     hide fairy happy
     show fairy neutral at right
@@ -185,7 +185,7 @@ label start:
 
     m "But how am I supposed to do that with this giant butt?!"
 
-    # show Bubbleina happy
+    # show Bubbilina happy
     hide fairy mis 
     show fairy happy at right
 
@@ -423,7 +423,9 @@ label start:
         
         p "It's me, your dearly elected leader and I come before you on behalf of the entire nation."
 
-        p "You see, a giant asteroid is on a collision course with the planet Earth and thanks to lots of super smart, tax-paid scientists, your rear is strong enough to withstand the force of this fast approaching assteroid."
+        p "You see, a giant asteroid is on a collision course with the planet Earth."
+        
+        p "Thanks to lots of super smart, tax-paid scientists, your rear is strong enough to withstand the force of this fast approaching assteroid."
         
         p "Will you help us? Will you help your country?"
 
@@ -616,7 +618,7 @@ label start:
         
         a "Live your life to the fullest and don't forget to tag me on Insta!"
 
-        m "Thank you Bubbleina! Thank you for showing me that life is truly booty-ful."
+        m "Thank you Bubbilina! Thank you for showing me that life is truly booty-ful."
         
         m "I'll use this butt only for good I promise!"
 
@@ -663,21 +665,25 @@ label start:
         
         l "That's my real name."
 
+        play sound b_what volume 1.5
+
         m "Oh wow I can't believe it!"
         
         m "I've been watching your streams and liking your posts forever! You shouted me out once on your stream! I can't believe you're standing here!"
 
         l "Haha no the honor is mine!"
+
+        play sound l_ooh volume 2.0
         
         l "I was wondering if you were free to go...on...a date with me?"
         
         l "I think you're really cool and want to get to know you better."
 
-        play sound l_ooh volume 2.0
+        play sound b_ooh volume 1.5
 
         m "I mean uh, well, guh, ooohh weee, if you'd like to, then sure!"
 
-        m "I guess Bubbleina was right. Life is booty-ful. Butts are booty-ful. Here's to living life to the fullest! "
+        m "I guess Bubbilina was right. Life is booty-ful. Butts are booty-ful. Here's to living life to the fullest! "
 
         jump end
     
