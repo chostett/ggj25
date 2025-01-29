@@ -143,7 +143,7 @@ label start:
     hide fairy neutral
     show fairy happy at right
 
-    a "Bubblenia Of course I can! All it takes is a wave of my wand and a..."
+    a "Of course I can! All it takes is a wave of my wand and a..."
 
     a "Few"
 
