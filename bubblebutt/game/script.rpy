@@ -25,7 +25,7 @@ image bedroom bad = "bedroom_bad.png"
 image street1 = "street_1.png"
 image street2 = "street_2.png"
 image street3 = "street_3.png"
-image endscreen = "EndScreen.jpg"
+image endscreen = "EndScreen.png"
 
 # Declaring sprite names.
 
@@ -722,5 +722,7 @@ label start:
         scene endscreen
 
         "Thank you for playing our game! - Kyle, Ceren & CJ"
+
+        "Made for Global Game Jam 2025 - Theme: Bubble"
 
     return
