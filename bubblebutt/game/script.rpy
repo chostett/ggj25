@@ -5,14 +5,14 @@
 
 define m = Character("[realName]")
 define b = Character("BubbleButt")
-define l = Character("Bubleigh")
-define a = Character("Bubbilina")
-define o = Character("Elderly Woman")
-define s = Character("Agent")
-define p1 = Character("Random Person 1")
-define p2 = Character("Random Person 2")
-define p = Character("President")
-define sc = Character("Important Scientist")
+define l = Character("Bubleigh", who_color="#e44519")
+define a = Character("Bubbilina", who_color="#9010eb")
+define o = Character("Elderly Woman", who_color="#4d485f")
+define s = Character("Agent", who_color="#139d4d")
+define p1 = Character("Random Person 1", who_color="#4d485f")
+define p2 = Character("Random Person 2", who_color="#4d485f")
+define p = Character("President", who_color="#147ceb")
+define sc = Character("Important Scientist", who_color="#4d485f")
 
 
 # Declaring scene names.

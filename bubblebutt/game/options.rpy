@@ -32,15 +32,19 @@ define config.version = "1.0"
 define gui.about = _p("""
 Written for Global Game Jam 2025, from Jan 24th - 26th. Theme: Bubble.
 
-Credits
+Credits:
 
-Writer: Kyle
+Kyle Hovanec - writing, design
 
-Illustrations/Voice Acting: Ceren
+Ceren Gunes - design, art, voice acting (@cerengunes on Twitter)
 
-Illustrations/Programming/Voice Acting: CJ
+CJ Hostetter - programming, art, voice acting (illuminesce.itch.io)
 
-Thank you to Jonny_Cache, mabbees, and Shane for your lovely voices.
+Additional voices: Jonny_Cache, Matt "mabbees" Kaemmerer, and Shane Brown.
+
+Backgrounds: CJ Hostetter, Spacejoy, Josh Hild, Bruno Martins
+
+Fonts: Bubbly Bold by VEXED, Aovel Sans Rounded by Álvaro Thomáz
 """)
 
 

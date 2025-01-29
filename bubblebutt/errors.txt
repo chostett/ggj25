@@ -2,9 +2,37 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 38: invalid syntax
-    "audio/a_evil.ogg" volume 1.5
-                        ^
+File "game/script.rpy", line 8: invalid syntax
+    Character("Bubleigh" who_color="#e44519")
+                          ^
+
+File "game/script.rpy", line 9: invalid syntax
+    Character("Bubbilina" who_color="#9010eb")
+                           ^
+
+File "game/script.rpy", line 10: invalid syntax
+    Character("Elderly Woman" who_color="#4d485f")
+                               ^
+
+File "game/script.rpy", line 11: invalid syntax
+    Character("Agent" who_color="#139d4d")
+                       ^
+
+File "game/script.rpy", line 12: invalid syntax
+    Character("Random Person 1" who_color="#4d485f")
+                                 ^
+
+File "game/script.rpy", line 13: invalid syntax
+    Character("Random Person 2" who_color="#4d485f")
+                                 ^
+
+File "game/script.rpy", line 14: invalid syntax
+    Character("President" who_color="#147ceb")
+                           ^
+
+File "game/script.rpy", line 15: invalid syntax
+    Character("Important Scientist" who_color="#4d485f")
+                                     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Jan 26 13:43:28 2025
+Wed Jan 29 11:10:30 2025

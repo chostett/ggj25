@@ -3,9 +3,11 @@
 
 ## Team members
 
-- Ceren Gunes ([@CerenGunes](https://x.com/cerengunes) on Twitter) - design, art
+- Ceren Gunes ([@CerenGunes](https://x.com/cerengunes) on Twitter) - design, art, voice acting
 - Kyle Hovanec - writing, design
-- CJ Hostetter ([illuminesce.itch.io](https://illuminesce.itch.io/)) - programming, art
+- CJ Hostetter ([illuminesce.itch.io](https://illuminesce.itch.io/)) - programming, art, voice acting
+
+Additional voices: Jonny_Cache, Matt "mabbees" Kaemmerer, and Shane Brown.
 
 ## Credits
 
