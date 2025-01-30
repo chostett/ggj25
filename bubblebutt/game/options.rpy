@@ -45,6 +45,13 @@ Additional voices: Jonny_Cache, Matt "mabbees" Kaemmerer, and Shane Brown.
 Backgrounds: CJ Hostetter, Spacejoy, Josh Hild, Bruno Martins
 
 Fonts: Bubbly Bold by VEXED, Aovel Sans Rounded by Álvaro Thomáz
+
+Music: FREE SPIRIT (Instrumental Version) By Max Volante, P-Wing By Lupus Nocte
+, Valse triste By Blair McMillen, Conway Kuo
+
+All songs were downloaded from epidemicsound.com.
+
+Thanks for playing!
 """)
 
 
