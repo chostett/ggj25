@@ -34,11 +34,11 @@ Written for Global Game Jam 2025, from Jan 24th - 26th. Theme: Bubble.
 
 Credits:
 
-Kyle Hovanec - writing, design
+Kyle Hovanec - writing, design (mrkn1v3s.bsky.social on Bluesky)
 
 Ceren Gunes - design, art, voice acting (@cerengunes on Twitter)
 
-CJ Hostetter - programming, art, voice acting (illuminesce.itch.io)
+CJ Hostetter - programming, art, voice acting (gamedev.lgbt/@illuminesce on Mastodon)
 
 Additional voices: Jonny_Cache, Matt "mabbees" Kaemmerer, and Shane Brown.
 
