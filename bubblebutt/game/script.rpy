@@ -424,11 +424,11 @@ label start:
         hide bubble surprised
         show bubble neutral at left
 
-        p "Call Hello, good citizen."
+        p "Hello, good citizen."
         
         p "It's me, your dearly elected leader and I come before you on behalf of the entire nation."
 
-        p "You see, a giant asteroid is on a collision course with the planet Earth."
+        p "You see, a giant assteroid is on a collision course with the planet Earth."
         
         p "Thanks to lots of super smart, tax-paid scientists, your rear is strong enough to withstand the force of this fast approaching assteroid."
         
@@ -439,7 +439,7 @@ label start:
 
         play sound b_what volume 1.2
 
-        b "My butt...is going to take on an asteroid?"
+        b "My butt...is going to take on an ass...teroid?"
 
         play sound b_hm volume 1.2
         
@@ -473,7 +473,7 @@ label start:
         
         sc "It's...a success!!"
         
-        sc "The asteroid has made contact with both left and right cheeks and has been destroyed. We're saved!"
+        sc "The assteroid has made contact with both left and right cheeks and has been destroyed. We're saved!"
 
         hide bubble determined
         show bubble happy at left
@@ -502,7 +502,7 @@ label start:
 
         b "Mr. President I'm sorry, I'm so sorry. I just can't!"
         
-        b "Me, my butt, I can't stop an entire asteroid—that's insane!"
+        b "Me, my butt, I can't stop an entire assteroid—that's insane!"
         
         b "Ask the scientists to look again! I'm running my ass out of here!"
 
@@ -539,14 +539,14 @@ label start:
         hide bubble bored
         show bubble surprised at left
 
-        b "You! You turned my behind into a badonkadonk! I want my basic behind back!"
+        b "You! You turned my behind into a badonkadonk! I want my basic butt back!"
 
         hide fairy happy 
         show fairy mis at right
         hide bubble surprised
         show bubble bored at left
 
-        a "Well why do you think I'm here? To ogle my handiwork?"
+        a "Why do you think I'm here? To ogle my handiwork?"
         
         a "I mean I could but..."
 
@@ -666,7 +666,7 @@ label start:
 
         play sound l_laugh volume 2.0
 
-        l "Yes! It is me, the one and only big booty influencer and number 2 MOBA influencer in the world, Bubbleigh_Boughtie."
+        l "Yes! It is me, the one and only big booty influencer and number 2 MOBA streamer, Bubbleigh_Boughtie."
         
         l "That's my real name."
 
