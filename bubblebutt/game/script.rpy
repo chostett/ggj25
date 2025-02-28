@@ -19,6 +19,8 @@ define sc = Character("Important Scientist", who_color="#4d485f")
 
 image bedroom cutscene = "cutscene_bedroom_good.png"
 image bedroom cutscene bad = "cutscene_bedroom_bad.png"
+image street cutscene 1 = "cutscene_street_1.png"
+image street cutscene 2 = "cutscene_street_2.png"
 image instagram = "instagram.png"
 image bedroom good = "bedroom.png"
 image bedroom bad = "bedroom_bad.png"
@@ -329,16 +331,19 @@ label start:
     
     label good2:
         hide bubble surprised
-        show bubble determined at left
-        play sound crash volume 1.2
+        show street cutscene 1
 
         b "Stop the carrrrrrrr!!!!! Work butt work!"
+
+        play sound crash volume 1.2
+        hide street cutscene 1
+        show street cutscene 2
 
         o "Young man...lady...sir. Thank you!"
         
         o "You saved me. You and your... big butt."
 
-        hide bubble determined
+        hide street cutscene 2
         show bubble happy at left
         play sound p_hero volume 2.5
 
