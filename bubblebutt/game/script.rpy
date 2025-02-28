@@ -428,7 +428,7 @@ label start:
         
         p "It's me, your dearly elected leader and I come before you on behalf of the entire nation."
 
-        p "You see, a giant assteroid is on a collision course with the planet Earth."
+        p "You see, a giant asteroid is on a collision course with the planet Earth."
         
         p "Thanks to lots of super smart, tax-paid scientists, your rear is strong enough to withstand the force of this fast approaching assteroid."
         
@@ -502,7 +502,7 @@ label start:
 
         b "Mr. President I'm sorry, I'm so sorry. I just can't!"
         
-        b "Me, my butt, I can't stop an entire assteroid—that's insane!"
+        b "Me, my butt, I can't stop an entire asteroid—that's insane!"
         
         b "Ask the scientists to look again! I'm running my ass out of here!"
 
@@ -525,7 +525,7 @@ label start:
 
         show bubble bored at left
             
-        b "I'm so tired! My poor butt has butted into so many adventures today but it's still them."
+        b "I'm so tired! My poor butt has butted into so many adventures today...but it's still there."
         
         b "I guess I'm gonna be stuck with this thing forever. I gotta buy new jeans now."
 
