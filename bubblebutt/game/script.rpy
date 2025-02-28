@@ -5,7 +5,7 @@
 
 define m = Character("[realName]")
 define b = Character("BubbleButt")
-define l = Character("Bubbleigh", who_color="#e44519")
+define l = Character("Bubleigh", who_color="#e44519")
 define a = Character("Bubbilina", who_color="#9010eb")
 define o = Character("Elderly Woman", who_color="#4d485f")
 define s = Character("Agent", who_color="#139d4d")
@@ -666,7 +666,7 @@ label start:
 
         play sound l_laugh volume 2.0
 
-        l "Yes! It is me, the one and only big booty influencer and number 2 MOBA streamer, Bubbleigh_Boughtie."
+        l "Yes! It is me, the one and only big booty influencer and number 2 MOBA streamer, Bubleigh_Boughtie."
         
         l "That's my real name."
 
