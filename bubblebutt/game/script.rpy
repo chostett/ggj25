@@ -21,6 +21,9 @@ image bedroom cutscene = "cutscene_bedroom_good.png"
 image bedroom cutscene bad = "cutscene_bedroom_bad.png"
 image street cutscene 1 = "cutscene_street_1.png"
 image street cutscene 2 = "cutscene_street_2.png"
+image asteroid 1 = "cutscene_asteroid_1.png"
+image asteroid 2 = "cutscene_asteroid_2.png"
+image asteroid 3 = "cutscene_asteroid_3.png"
 image instagram = "instagram.png"
 image bedroom good = "bedroom.png"
 image bedroom bad = "bedroom_bad.png"
@@ -460,13 +463,18 @@ label start:
     
     label good3:
         hide bubble surprised 
-        show bubble determined at left
+        show asteroid 1
         play sound b_haha volume 1.2
 
         b "Mr. President my butt is in position. I'm ready to take on the incoming assteroid."
 
+        hide asteroid 1
+        show asteroid 2
+
         p "God speed good citizen. The whole nation looks upon you and your patriotic posterior."
 
+        hide asteroid 2
+        show asteroid 3
         play sound crash volume 1.2
 
         sc "We have impact!"
@@ -475,17 +483,12 @@ label start:
         
         sc "The assteroid has made contact with both left and right cheeks and has been destroyed. We're saved!"
 
-        hide bubble determined
-        show bubble happy at left
-
-        play sound b_haha volume 1.2
-
         b "I..did it! I'm this nation's greatest hero! I'm a true government {i}ass{/i}et… hehehe “ass”."
 
         p "Indeed you are! Stand up, let the nation see you!"
 
         play sound b_sigh volume 1.2
-        hide bubble happy
+        hide asteroid 3
         show bubble bored at left
 
         b "Stand up...not for a while. Give me a minute..."
