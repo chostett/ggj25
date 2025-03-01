@@ -82,6 +82,15 @@ init:
     define right = Position(xalign=0.8)
     define centerleft = Position(xalign=0.4)
 
+# animation, shaking
+    transform shaking:
+        linear 0.1 xoffset -5 yoffset 5 
+        linear 0.1 xoffset 6 yoffset -6 
+        linear 0.1 xoffset 5 yoffset -5
+        linear 0.1 xoffset -6 yoffset 6
+        linear 0.1 xoffset 0 yoffset 0
+        repeat
+
 
 # The game starts here.
 
@@ -474,7 +483,7 @@ label start:
         p "God speed good citizen. The whole nation looks upon you and your patriotic posterior."
 
         hide asteroid 2
-        show asteroid 3
+        show asteroid 3 at shaking
         play sound crash volume 1.2
 
         sc "We have impact!"
@@ -482,6 +491,9 @@ label start:
         sc "It's...a success!!"
         
         sc "The assteroid has made contact with both left and right cheeks and has been destroyed. We're saved!"
+
+        hide asteroid 3
+        show asteroid 3
 
         b "I..did it! I'm this nation's greatest hero! I'm a true government {i}ass{/i}et… hehehe “ass”."
 
