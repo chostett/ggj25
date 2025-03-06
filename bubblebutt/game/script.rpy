@@ -6,7 +6,7 @@
 define m = Character("[realName]")
 define b = Character("BubbleButt")
 define l = Character("Bubleigh", who_color="#e44519")
-define a = Character("Bubbilina", who_color="#9010eb")
+define a = Character("Bubbleina", who_color="#9010eb")
 define o = Character("Elderly Woman", who_color="#4d485f")
 define s = Character("Agent", who_color="#139d4d")
 define p1 = Character("Random Person 1", who_color="#4d485f")
@@ -35,19 +35,22 @@ image endscreen = "EndScreen.png"
 # Declaring sprite names.
 
 image bubble flat = "BB_FlatNeutral.png"
-image bubble neutral = "BB_Neutral.png"
-image bubble bored = "BB_Bored.png"
-image bubble surprised = "BB_Surprised.png"
-image bubble sad = "BB_Sad.png"
-image bubble happy = "BB_Happy.png"
+image bubble flat determined = "BB_FlatDetermined.png"
+image bubble flat surprised = "BB_FlatSurprised.png"
+image bubble neutral = "BB_Bored.png"
 image bubble determined = "BB_Determined.png"
-image fairy neutral = "Bubbilina_Neutral.png"
-image fairy happy = "Bubbilina_Happy.png"
-image fairy mis = "Bubbilina_Mischievous.png"
+image bubble happy = "BB_Happy.png"
+image bubble noo = "BB_Noo.png"
+image bubble runaway = "BB_RunAway.png"
+image bubble sad = "BB_Sad.png"
+image bubble surprised = "BB_Surprised.png"
+image fairy neutral = "Bubbleina_Neutral.png"
+image fairy happy = "Bubbleina_Happy.png"
+image fairy mis = "Bubbleina_Mischievous.png"
 image leigh = "Bubbleigh_Neutral.png"
 image agents = "Agents_Neutral.png"
 
-# Define audio for ease of calling later. A = Bubbilina, B = BubbleButt/Player, l = Bubbleigh, p = Random People.
+# Define audio for ease of calling later. A = Bubbleina, B = BubbleButt/Player, l = Bubbleigh, p = Random People.
 
 define audio.a_evil = "audio/a_evil.ogg"
 define audio.a_happy = "audio/a_happy.ogg"
@@ -78,8 +81,9 @@ define audio.neutral = "audio/neutral.mp3"
 init:
 # Sprite Positions
     define center = Position(xalign=0.5)
-    define left = Position(xalign=0.2)
+    define left = Position(xalign=0.1)
     define right = Position(xalign=0.8)
+    define upperRight = Position(xalign=0.8, yalign=0.2)
     define centerleft = Position(xalign=0.4)
 
 # animation, shaking
@@ -131,44 +135,54 @@ label start:
     scene bedroom good
 
     show bubble flat at left
-    show fairy neutral at right
+    show fairy neutral at upperRight
     play sound sparklesin volume 1.0
 
     a "Did I hear someone say {i}well-rounded?{/i} I can make that happen you know."
 
     play sound b_what volume 1.2
+    hide bubble flat
+    show bubble flat surprised at left
 
     m "Whaaaaaaa?! Who are you? What are you? Why are you here?"
 
     hide fairy neutral
-    show fairy happy at right
+    show fairy happy at upperRight
 
     play sound a_happy volume 1.2
 
-    a "My name is Bubbilina. I've been sent here to give you that well-rounded life you seek..."
+    a "My name is Bubbleina. I've been sent here to give you that well-rounded life you seek..."
 
     hide fairy happy
-    show fairy neutral at right
+    show fairy neutral at upperRight
+    hide bubble flat surprised
+    show bubble flat at left
 
     m "Did... did you hear my wishes? Can you really help me out?"
 
     play sound a_happy volume 1.2
 
     hide fairy neutral
-    show fairy happy at right
+    show fairy happy at upperRight
 
     a "Of course I can! All it takes is a wave of my wand and a..."
 
     a "Few"
 
+    hide bubble flat
+    show bubble flat surprised at left
+
     a "{i}magic{/i}"
 
     a "words..."
 
+    hide bubble flat surprised
+    show bubble flat determined at left
+
     m "Then do it! Give me the well-rounded life I crave!"
 
     hide fairy happy
-    show fairy mis at right
+    show fairy mis at upperRight
     play sound sparklesout volume 1.0
 
     a "...mumble mumble big mumble mumble butt mumble mumble..."
@@ -177,7 +191,7 @@ label start:
     hide fairy mis
 
     show bubble surprised at left
-    show fairy happy at right
+    show fairy happy at upperRight
 
     m "Something feels bigger...more cushiony...wait...it's my butt!"
 
@@ -188,10 +202,10 @@ label start:
     play sound a_evil volume 1.2
     
     hide fairy happy
-    show fairy mis at right
+    show fairy mis at upperRight
 
     hide bubble surprised
-    show bubble bored at left
+    show bubble neutral at left
 
     a "I'm sorry, is this not what you asked for? You wanted a well-rounded life and I gave it to you!"
     
@@ -199,9 +213,9 @@ label start:
 
     m "But how am I supposed to do that with this giant butt?!"
 
-    # show Bubbilina happy
+    # show Bubbleina happy
     hide fairy mis 
-    show fairy happy at right
+    show fairy happy at upperRight
 
     a "That's up to you to find out!"
 
@@ -212,26 +226,26 @@ label start:
     a "...[realName],"
 
     hide fairy happy 
-    show fairy mis at right
+    show fairy mis at upperRight
 
     a "Or should I say..."
 
     a "BubbleButt!"
 
     play sound b_no volume 1.2
-    hide bubble bored 
-    show bubble sad at left
+    hide bubble neutral 
+    show bubble noo at left
 
     b "Nooooooooooo!"
 
     scene street1
-    show bubble bored at left
+    show bubble neutral at left
 
     b "I'm so glad I had my stretchy pants."
     
     b "Now to get out and figure out how to stop this stupid curse and shrink my stupid butt back back down to normal."
 
-    hide bubble bored 
+    hide bubble neutral 
     show bubble determined at left
 
     play sound b_sigh volume 1.2
@@ -256,6 +270,8 @@ label start:
     b "Oh my god they're all looking at me. I can't hide this thing!"
 
     play sound meanlaugh volume 2.0
+    hide bubble sad
+    show bubble runaway at left
     
     b "Everyone is so mean to me! What am I going to do?"
 
@@ -271,7 +287,7 @@ label start:
             jump bad1
     
     label good1:
-        hide bubble sad
+        hide bubble runaway
         show bubble determined at left 
 
         b "Wait why do I care?"
@@ -290,16 +306,20 @@ label start:
         jump choice2
 
     label bad1:
+        hide bubble runaway
+        show bubble sad at left
 
         b "They think i'm a freak! A big caked up bootylicious freak."
 
         play sound b_sigh volume 1.2
+        hide bubble sad
+        show bubble runaway at left
         
         b "I can't do this. I can't go outside again. I need to go back."
         
         b "I can never show my cheeks again. I'm going home!"
 
-        hide bubble sad
+        hide bubble runaway
 
         jump choice2
     
@@ -384,11 +404,11 @@ label start:
         o "Thanks for nothing! Especially you Cheeks McGee!"
 
         hide bubble sad
-        show bubble bored at left
+        show bubble neutral at left
         play sound b_sigh volume 1.2
 
         b "I'm so useless..."
-        hide bubble bored
+        hide bubble neutral
 
         jump choice3
     
@@ -501,12 +521,12 @@ label start:
 
         play sound b_sigh volume 1.2
         hide asteroid 3
-        show bubble bored at left
+        show bubble neutral at left
 
         b "Stand up...not for a while. Give me a minute..."
 
         hide agents
-        hide bubble bored
+        hide bubble neutral
 
         jump final
     
@@ -538,35 +558,35 @@ label start:
 
         scene bedroom good 
 
-        show bubble bored at left
+        show bubble neutral at left
             
         b "I'm so tired! My poor butt has butted into so many adventures today...but it's still there."
         
         b "I guess I'm gonna be stuck with this thing forever. I gotta buy new jeans now."
 
         play sound sparklesin volume 1.0
-        show fairy happy at right
+        show fairy happy at upperRight
 
         a "Oh the problems of the one percent!"
         
         a "Life must be so hard having a perfectly shaped bubble butt. You're the real hero here."
 
-        hide bubble bored
+        hide bubble neutral
         show bubble surprised at left
 
         b "You! You turned my behind into a badonkadonk! I want my basic butt back!"
 
         hide fairy happy 
-        show fairy mis at right
+        show fairy mis at upperRight
         hide bubble surprised
-        show bubble bored at left
+        show bubble neutral at left
 
         a "Why do you think I'm here? To ogle my handiwork?"
         
         a "I mean I could but..."
 
         hide fairy mis
-        show fairy happy at right 
+        show fairy happy at upperRight 
 
         a "No! I'm here to decide your fate."
         
@@ -576,12 +596,12 @@ label start:
 
         a "Nope! Be quiet now!"
         hide fairy happy
-        hide bubble bored
+        hide bubble neutral
 
         if goodEnd > badEnd:
             stop music
 
-            show fairy happy at right
+            show fairy happy at upperRight
             show bubble happy at left
             play music good volume 0.4
 
@@ -611,7 +631,7 @@ label start:
         else:
             scene bedroom bad
             stop music
-            show fairy mis at right
+            show fairy mis at upperRight
             show bubble sad at left
             play music bad volume 0.4
             
@@ -621,7 +641,7 @@ label start:
     
     label keepButt:
         hide fairy happy
-        show fairy mis at right
+        show fairy mis at upperRight
         a "Wat?"
         
         hide bubble determined
@@ -634,11 +654,11 @@ label start:
         a "Well if that's what you truly want, sure! Enjoy! Less work for me."
 
         hide fairy mis
-        show fairy happy at right
+        show fairy happy at upperRight
         
         a "Live your life to the fullest and don't forget to tag me on Insta!"
 
-        m "Thank you Bubbilina! Thank you for showing me that life is truly booty-ful."
+        m "Thank you Bubbleina! Thank you for showing me that life is truly booty-ful."
         
         m "I'll use this butt only for good I promise!"
 
@@ -646,7 +666,7 @@ label start:
     
     label returnButt:
         hide fairy happy
-        show fairy mis at right
+        show fairy mis at upperRight
         hide bubble determined
         show bubble happy at left
 
@@ -659,7 +679,7 @@ label start:
         a "Your big cursed bouncy behind is no more. Go forth and be happy."
 
         hide fairy mis
-        show fairy happy at right
+        show fairy happy at upperRight
         hide bubble happy
         show bubble flat at left
 
@@ -703,7 +723,7 @@ label start:
 
         m "I mean uh, well, guh, ooohh weee, if you'd like to, then sure!"
 
-        m "I guess Bubbilina was right. Life is booty-ful. Butts are booty-ful. Here's to living life to the fullest! "
+        m "I guess Bubbleina was right. Life is booty-ful. Butts are booty-ful. Here's to living life to the fullest! "
 
         jump end
     
