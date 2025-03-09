@@ -390,20 +390,21 @@ label start:
 
     label bad2:
         hide bubble surprised
-        show bubble sad at left
+        show bubble runaway at left
         play sound b_no volume 1.2
 
         b "I can't do it!"
         
         b "I'm sorry!! Someone else help her please!"
 
-        p1 "The car stopped thank god."
+        hide bubble runaway
+
+        p1 "The car stopped...thank god."
         
         p2 "You were {i}right{/i} there. What the heck?"
 
         o "Thanks for nothing! Especially you Cheeks McGee!"
 
-        hide bubble sad
         show bubble neutral at left
         play sound b_sigh volume 1.2
 
@@ -532,7 +533,7 @@ label start:
     
     label bad3:
         hide bubble surprised
-        show bubble sad at left
+        show bubble runaway at left
         play sound b_sigh volume 1.2
 
         b "Mr. President I'm sorry, I'm so sorry. I just can't!"
@@ -540,6 +541,8 @@ label start:
         b "Me, my butt, I can't stop an entire asteroid—that's insane!"
         
         b "Ask the scientists to look again! I'm running my ass out of here!"
+
+        hide bubble runaway
 
         sc "Mr. President, our defense appears to be running away?"
         
@@ -550,7 +553,6 @@ label start:
         p "It appears the power of booty has let us and our nation down yet again. I bet I get blamed for this."
 
         hide agents
-        hide bubble sad
 
         jump final
     
