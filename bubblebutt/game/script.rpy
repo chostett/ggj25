@@ -37,7 +37,8 @@ image endscreen = "EndScreen.png"
 image bubble flat = "BB_FlatNeutral.png"
 image bubble flat determined = "BB_FlatDetermined.png"
 image bubble flat surprised = "BB_FlatSurprised.png"
-image bubble neutral = "BB_Bored.png"
+image bubble neutral = "BB_Neutral.png"
+image bubble bored = "BB_Bored.png"
 image bubble determined = "BB_Determined.png"
 image bubble happy = "BB_Happy.png"
 image bubble noo = "BB_Noo.png"
@@ -95,6 +96,10 @@ init:
         linear 0.1 xoffset 0 yoffset 0
         repeat
 
+# animation, run away: increase linear for more time, increase the negeative number of the xalign is the sprite is still on the screen after the move
+    transform offLeft:
+        linear 3.0 xalign -0.10 
+
 
 # The game starts here.
 
@@ -146,6 +151,8 @@ label start:
 
     m "Whaaaaaaa?! Who are you? What are you? Why are you here?"
 
+    hide bubble flat surprised
+    show bubble flat at left
     hide fairy neutral
     show fairy happy at upperRight
 
@@ -155,8 +162,6 @@ label start:
 
     hide fairy happy
     show fairy neutral at upperRight
-    hide bubble flat surprised
-    show bubble flat at left
 
     m "Did... did you hear my wishes? Can you really help me out?"
 
@@ -205,7 +210,7 @@ label start:
     show fairy mis at upperRight
 
     hide bubble surprised
-    show bubble neutral at left
+    show bubble sad at left
 
     a "I'm sorry, is this not what you asked for? You wanted a well-rounded life and I gave it to you!"
     
@@ -233,20 +238,23 @@ label start:
     a "BubbleButt!"
 
     play sound b_no volume 1.2
-    hide bubble neutral 
+    hide bubble sad 
     show bubble noo at left
 
     b "Nooooooooooo!"
 
-    scene street1
-    show bubble neutral at left
+    scene street1 with wiperight
+    show bubble bored at left
 
     b "I'm so glad I had my stretchy pants."
+
+    hide bubble bored
+    show bubble sad at left
     
     b "Now to get out and figure out how to stop this stupid curse and shrink my stupid butt back back down to normal."
 
-    hide bubble neutral 
-    show bubble determined at left
+    hide bubble sad
+    show bubble neutral at left
 
     play sound b_sigh volume 1.2
 
@@ -255,7 +263,7 @@ label start:
     # show Illustration 1
 
     play sound p_omg volume 2.0
-    hide bubble determined
+    hide bubble neutral
     show bubble surprised at left
 
     p1 "Oh my god, look at their butt!"
@@ -319,28 +327,35 @@ label start:
         
         b "I can never show my cheeks again. I'm going home!"
 
-        hide bubble runaway
+        show bubble runaway with moveoutleft
 
         jump choice2
     
     label choice2:
-        scene street2
+        scene street2 with wiperight
         show bubble neutral at left
 
         "On their way down the street, our bootylicious protagonist stops to think."
 
         play sound b_hm volume 1.2
+        hide bubble neutral
+        show bubble bored at left
 
         b "Well-rounded life... well-rounded. I mean I got that but how can I make my life fulfilled in 24 hours?"
+
+        hide bubble bored
+        show bubble sad at left
         
         b "This sucks, this is booty cheeks... literally."
 
-        hide bubble neutral
-        show bubble surprised at left
+        hide bubble sad
+        show bubble neutral at left
 
         "And what a sight! A nearsighted elderly woman, crossing the street..."
 
         play sound car volume 1.0
+        hide bubble neutral
+        show bubble surprised at left
         
         "But that car is speeding right through that signal!"
 
@@ -390,31 +405,33 @@ label start:
 
     label bad2:
         hide bubble surprised
-        show bubble runaway at left
+        show bubble noo at left
         play sound b_no volume 1.2
 
         b "I can't do it!"
+
+        hide bubble noo
+        show bubble runaway at left
         
         b "I'm sorry!! Someone else help her please!"
 
-        hide bubble runaway
-
         p1 "The car stopped...thank god."
+
         
         p2 "You were {i}right{/i} there. What the heck?"
 
         o "Thanks for nothing! Especially you Cheeks McGee!"
 
-        show bubble neutral at left
         play sound b_sigh volume 1.2
+        hide bubble runaway
+        show bubble sad at left
 
         b "I'm so useless..."
-        hide bubble neutral
 
         jump choice3
     
     label choice3:
-        scene street3
+        scene street3 with wiperight
         show bubble surprised at left
 
         "Even after all that, our protagonist is starting to panic."
@@ -429,18 +446,24 @@ label start:
 
         b "I wanna be [realName] again!"
 
+        hide bubble sad
+        show bubble neutral at left
+
         "A black car pulls up. BubbleButt is surprised when two men dressed in black suits approach them. They look serious."
 
         show agents at right
 
         s "Are you the citizen with the butt? The big one."
 
-        hide bubble sad
+        hide bubble neutral
         show bubble surprised at left
 
         play sound b_hm volume 1.2
 
         b "I uh, I guess that's me. Unless there's a bigger butt around here but I doubt that..."
+
+        hide bubble surprised
+        show bubble neutral at left
 
         s "We need your help, its a matter of national security."
 
@@ -448,37 +471,53 @@ label start:
         hide agents
 
         play sound b_what volume 1.2
+        hide bubble neutral
+        show bubble surprised at left
 
         b "My butt can...save people?"
+
+        hide bubble surprised
+        show bubble determined at left
         
         b "How? I know it's big and perfectly round and honestly looks pretty good on me, but how can that help out?"
 
         show agents at right
-        hide bubble surprised
+        hide bubble determined
         show bubble neutral at left
 
         p "Hello, good citizen."
         
         p "It's me, your dearly elected leader and I come before you on behalf of the entire nation."
 
+        hide bubble neutral
+        show bubble surprised at left
+
         p "You see, a giant asteroid is on a collision course with the planet Earth."
+
+        hide bubble surprised
+        show bubble bored at left
         
         p "Thanks to lots of super smart, tax-paid scientists, your rear is strong enough to withstand the force of this fast approaching assteroid."
         
         p "Will you help us? Will you help your country?"
 
-        hide bubble neutral
-        show bubble surprised at left
+        hide bubble bored
+        show bubble determined at left
 
         play sound b_what volume 1.2
 
         b "My butt...is going to take on an ass...teroid?"
 
         play sound b_hm volume 1.2
+        hide bubble determined
+        show bubble sad at left
         
         b "Can I really save these people?"
 
         p "Have you looked at yourself?"
+
+        hide bubble sad
+        show bubble determined at left
 
         p "We're convinced that thing can take on a black hole. Are you ready to be the hero you were destined to be?"
 
@@ -492,7 +531,7 @@ label start:
             jump bad3
     
     label good3:
-        hide bubble surprised 
+        hide bubble determined 
         show asteroid 1
         play sound b_haha volume 1.2
 
@@ -532,13 +571,16 @@ label start:
         jump final
     
     label bad3:
-        hide bubble surprised
-        show bubble runaway at left
+        hide bubble determined
+        show bubble sad at left
         play sound b_sigh volume 1.2
 
         b "Mr. President I'm sorry, I'm so sorry. I just can't!"
         
         b "Me, my butt, I can't stop an entire asteroid—that's insane!"
+
+        hide bubble sad
+        show bubble runaway at left
         
         b "Ask the scientists to look again! I'm running my ass out of here!"
 
@@ -547,6 +589,8 @@ label start:
         sc "Mr. President, our defense appears to be running away?"
         
         sc "They're too dummy thicc, we hear what appears to be their cheeks clapping on the open mic."
+
+        ## Potential bad scene here, too?
 
         sc "Assteroid has made contact with our planet. Currently analyzing damage but it looks catastrophic."
 
@@ -563,25 +607,30 @@ label start:
         show bubble neutral at left
             
         b "I'm so tired! My poor butt has butted into so many adventures today...but it's still there."
+
+        hide bubble neutral 
+        show bubble bored at left
         
         b "I guess I'm gonna be stuck with this thing forever. I gotta buy new jeans now."
 
         play sound sparklesin volume 1.0
         show fairy happy at upperRight
+        hide bubble bored
+        show bubble surprised at left
 
         a "Oh the problems of the one percent!"
         
         a "Life must be so hard having a perfectly shaped bubble butt. You're the real hero here."
 
-        hide bubble neutral
-        show bubble surprised at left
+        hide bubble surprised
+        show bubble sad at left
 
         b "You! You turned my behind into a badonkadonk! I want my basic butt back!"
 
         hide fairy happy 
         show fairy mis at upperRight
-        hide bubble surprised
-        show bubble neutral at left
+        hide bubble sad
+        show bubble bored at left
 
         a "Why do you think I'm here? To ogle my handiwork?"
         
@@ -594,11 +643,14 @@ label start:
         
         a "You've been through a lot and made some big choices that really surprised me. Are you ready to accept your destiny?"
 
+        hide bubble bored 
+        show bubble determined at left
+
         b "Can I just say before you judge that I..."
 
         a "Nope! Be quiet now!"
         hide fairy happy
-        hide bubble neutral
+        hide bubble determined
 
         if goodEnd > badEnd:
             stop music
@@ -650,13 +702,19 @@ label start:
         show bubble happy at left
 
         m "I feel like during my time with this bubble butt, I learned that accepting who I was was a big part of being happy and finding fulfillment in life."
+
+        hide bubble happy
+        show bubble determined at left
         
         m "I want the world to know that yes! This is who I am and that doesn't stop me from being happy!"
+
+        hide bubble determined
+        show bubble happy at left
         
         a "Well if that's what you truly want, sure! Enjoy! Less work for me."
 
         hide fairy mis
-        show fairy happy at upperRight
+        ## This will be the scene for good - Keep Butt
         
         a "Live your life to the fullest and don't forget to tag me on Insta!"
 
@@ -683,13 +741,13 @@ label start:
         hide fairy mis
         show fairy happy at upperRight
         hide bubble happy
-        show bubble flat at left
+        show bubble flat surprised at left
 
         m "I'm going to go live my life! There's still time in the day."
         
         m "I need to take a walk with a new center of gravity again."
 
-        scene street1
+        scene street1 with wiperight
         show bubble flat at left
         show leigh at right
 
@@ -698,16 +756,24 @@ label start:
         l "Um excuse me, hi um, are you that hero the president is talking about on TV?"
 
         m "Depends on who is asking..."
+
+        hide bubble flat
+        show bubble flat surprised at left
         
         m "Wait are you?!"
 
         play sound l_laugh volume 2.0
 
         l "Yes! It is me, the one and only big booty influencer and number 2 MOBA streamer, Bubleigh_Boughtie."
+
+        hide bubble flat surprised
+        show bubble flat
         
         l "That's my real name."
 
         play sound b_what volume 1.5
+        hide bubble flat
+        show bubble flat determined
 
         m "Oh wow I can't believe it!"
         
@@ -716,12 +782,15 @@ label start:
         l "Haha no the honor is mine!"
 
         play sound l_ooh volume 2.0
+        hide bubble flat determined
+        show bubble flat surprised
         
         l "I was wondering if you were free to go...on...a date with me?"
         
         l "I think you're really cool and want to get to know you better."
 
         play sound b_ooh volume 1.5
+        ## This will be the good scene for the Return Butt
 
         m "I mean uh, well, guh, ooohh weee, if you'd like to, then sure!"
 
@@ -755,6 +824,7 @@ label start:
         b "Oh hey Bubbleigh is streaming! Sweet."
 
         play sound p_omg volume 2.0
+        ## This is the very bad scene.
 
         p1 "Oh dear god, the acid demons are back!!"
 
