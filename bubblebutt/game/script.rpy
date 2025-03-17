@@ -18,18 +18,23 @@ define sc = Character("Important Scientist", who_color="#4d485f")
 # Declaring scene names.
 
 image bedroom cutscene = "cutscene_bedroom_good.png"
+image instagram = "instagram.png"
 image bedroom cutscene bad = "cutscene_bedroom_bad.png"
 image street cutscene 1 = "cutscene_street_1.png"
 image street cutscene 2 = "cutscene_street_2.png"
 image asteroid 1 = "cutscene_asteroid_1.png"
 image asteroid 2 = "cutscene_asteroid_2.png"
 image asteroid 3 = "cutscene_asteroid_3.png"
-image instagram = "instagram.png"
+image asteroid bad = "cutscene_asteroid_bad.png"
 image bedroom good = "bedroom.png"
 image bedroom bad = "bedroom_bad.png"
 image street1 = "street_1.png"
 image street2 = "street_2.png"
 image street3 = "street_3.png"
+
+# Declaring ending screens
+image bedroom cutscene bad = "cutscene_bedroom_bad.png"
+image keep butt = "cutscene_keep_good.png"
 image endscreen = "EndScreen.png"
 
 # Declaring sprite names.
@@ -586,17 +591,15 @@ label start:
 
         hide bubble runaway
 
+        scene asteroid bad
+
         sc "Mr. President, our defense appears to be running away?"
         
         sc "They're too dummy thicc, we hear what appears to be their cheeks clapping on the open mic."
 
-        ## Potential bad scene here, too?
-
         sc "Assteroid has made contact with our planet. Currently analyzing damage but it looks catastrophic."
 
         p "It appears the power of booty has let us and our nation down yet again. I bet I get blamed for this."
-
-        hide agents
 
         jump final
     
@@ -714,7 +717,7 @@ label start:
         a "Well if that's what you truly want, sure! Enjoy! Less work for me."
 
         hide fairy mis
-        ## This will be the scene for good - Keep Butt
+        scene keep butt
         
         a "Live your life to the fullest and don't forget to tag me on Insta!"
 
