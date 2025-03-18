@@ -35,6 +35,7 @@ image street3 = "street_3.png"
 # Declaring ending screens
 image bedroom cutscene bad = "cutscene_bedroom_bad.png"
 image keep butt = "cutscene_keep_good.png"
+image nokeep butt = "cutscene_return_good.png"
 image endscreen = "EndScreen.png"
 
 # Declaring sprite names.
@@ -267,13 +268,13 @@ label start:
 
     # show Illustration 1
 
-    play sound p_omg volume 2.0
+    play sound p_omg volume 1.5
     hide bubble neutral
     show bubble surprised at left
 
     p1 "Oh my god, look at their butt!"
 
-    play sound p_cake volume 2.0
+    play sound p_cake volume 1.5
 
     p2 "Are you a bakery? Cuz that's some serious cake son!"
 
@@ -282,7 +283,7 @@ label start:
 
     b "Oh my god they're all looking at me. I can't hide this thing!"
 
-    play sound meanlaugh volume 2.0
+    play sound meanlaugh volume 1.5
     hide bubble sad
     show bubble runaway at left
     
@@ -793,11 +794,13 @@ label start:
         l "I think you're really cool and want to get to know you better."
 
         play sound b_ooh volume 1.5
-        ## This will be the good scene for the Return Butt
+        scene nokeep butt
 
         m "I mean uh, well, guh, ooohh weee, if you'd like to, then sure!"
 
-        m "I guess Bubbleina was right. Life is booty-ful. Butts are booty-ful. Here's to living life to the fullest! "
+        m "I guess Bubbleina was right. Life is booty-ful. Butts are booty-ful."
+
+        m "Here's to living life to the fullest!"
 
         jump end
     

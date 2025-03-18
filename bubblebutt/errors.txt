@@ -2,37 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 8: invalid syntax
-    Character("Bubleigh" who_color="#e44519")
-                          ^
+File "game/script.rpy", line 38: expected 'image_name_component' not found.
+    image return butt = "cutscene_return_good.png"
+         ^
 
-File "game/script.rpy", line 9: invalid syntax
-    Character("Bubbilina" who_color="#9010eb")
-                           ^
-
-File "game/script.rpy", line 10: invalid syntax
-    Character("Elderly Woman" who_color="#4d485f")
-                               ^
-
-File "game/script.rpy", line 11: invalid syntax
-    Character("Agent" who_color="#139d4d")
-                       ^
-
-File "game/script.rpy", line 12: invalid syntax
-    Character("Random Person 1" who_color="#4d485f")
-                                 ^
-
-File "game/script.rpy", line 13: invalid syntax
-    Character("Random Person 2" who_color="#4d485f")
-                                 ^
-
-File "game/script.rpy", line 14: invalid syntax
-    Character("President" who_color="#147ceb")
-                           ^
-
-File "game/script.rpy", line 15: invalid syntax
-    Character("Important Scientist" who_color="#4d485f")
-                                     ^
+File "game/script.rpy", line 797: expected 'image_name_component' not found.
+    scene return good
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Jan 29 11:10:30 2025
+Tue Mar 18 22:22:53 2025
