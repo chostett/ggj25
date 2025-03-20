@@ -26,13 +26,17 @@ image asteroid 1 = "cutscene_asteroid_1.png"
 image asteroid 2 = "cutscene_asteroid_2.png"
 image asteroid 3 = "cutscene_asteroid_3.png"
 image asteroid bad = "cutscene_asteroid_bad.png"
+
+# Declaring backgrounds.
+
 image bedroom good = "bedroom.png"
 image bedroom bad = "bedroom_bad.png"
 image street1 = "street_1.png"
 image street2 = "street_2.png"
 image street3 = "street_3.png"
 
-# Declaring ending screens
+# Declaring ending screens. Good end, keep butt. Good end, return butt. Bad end + universal ending screen.
+
 image bedroom cutscene bad = "cutscene_bedroom_bad.png"
 image keep butt = "cutscene_keep_good.png"
 image nokeep butt = "cutscene_return_good.png"
@@ -74,6 +78,7 @@ define audio.p_hero = "audio/Hero.ogg"
 define audio.meanlaugh = "audio/MeanLaugh.ogg"
 define audio.p_omg = "audio/OMG.ogg"
 define audio.p_vod = "audio/VOD.ogg"
+define audio.thankyou = "audio/thankyou_woman.ogg"
 
 define audio.car = "audio/car.ogg"
 define audio.crash = "audio/crash.ogg"
@@ -391,6 +396,7 @@ label start:
         play sound crash volume 1.2
         hide street cutscene 1
         show street cutscene 2
+        play sound thankyou volume 0.5
 
         o "Young man...lady...sir. Thank you!"
         
