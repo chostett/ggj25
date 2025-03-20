@@ -857,8 +857,8 @@ label start:
 
         scene endscreen
 
-        "Thank you for playing our game! - Kyle, Ceren & CJ"
+        "Thank you for playing! - Kyle, Ceren & CJ"
 
-        "Made for Global Game Jam 2025 - Theme: Bubble"
+        "If you liked our cheeky little game, please make sure to review us on itch.io."
 
     return
