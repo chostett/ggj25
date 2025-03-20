@@ -81,6 +81,10 @@ define audio.meanlaugh = "audio/MeanLaugh.ogg"
 define audio.p_omg = "audio/OMG.ogg"
 define audio.p_vod = "audio/VOD.ogg"
 define audio.thankyou = "audio/thankyou_woman.ogg"
+define audio.err = "audio/err.ogg"
+define audio.godspeed = "audio/godspeed.ogg"
+define audio.mrmr = "audio/mrmr.ogg"
+define audio.well = "audio/well.ogg"
 
 define audio.car = "audio/car.ogg"
 define audio.crash = "audio/crash.ogg"
@@ -498,6 +502,7 @@ label start:
         show agents at right
         hide bubble determined
         show bubble neutral at left
+        play sound mrmr volume 1.0
 
         p "Hello, good citizen."
         
@@ -505,6 +510,7 @@ label start:
 
         hide bubble neutral
         show bubble surprised at left
+        play sound mrmr volume 1.0
 
         p "You see, a giant asteroid is on a collision course with the planet Earth."
 
@@ -512,6 +518,8 @@ label start:
         show bubble bored at left
         
         p "Thanks to lots of super smart, tax-paid scientists, your rear is strong enough to withstand the force of this fast approaching assteroid."
+
+        play sound well volume 1.0
         
         p "Will you help us? Will you help your country?"
 
@@ -527,6 +535,8 @@ label start:
         show bubble sad at left
         
         b "Can I really save these people?"
+
+        play sound err volume 1.0
 
         p "Have you looked at yourself?"
 
@@ -553,6 +563,7 @@ label start:
 
         hide asteroid 1
         show asteroid 2
+        play sound godspeed volume 1.0
 
         p "God speed good citizen. The whole nation looks upon you and your patriotic posterior."
 
@@ -570,6 +581,8 @@ label start:
         show asteroid 3
 
         b "I..did it! I'm this nation's greatest hero! I'm a true government {i}ass{/i}et… hehehe “ass”."
+
+        play sound mrmr volume 1.0
 
         p "Indeed you are! Stand up, let the nation see you!"
 
@@ -607,6 +620,8 @@ label start:
         sc "They're too dummy thicc, we hear what appears to be their cheeks clapping on the open mic."
 
         sc "Assteroid has made contact with our planet. Currently analyzing damage but it looks catastrophic."
+
+        play sound err volume 1.0
 
         p "It appears the power of booty has let us and our nation down yet again. I bet I get blamed for this."
 
