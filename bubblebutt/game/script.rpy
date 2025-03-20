@@ -40,6 +40,8 @@ image street3 = "street_3.png"
 image bedroom cutscene bad = "cutscene_bedroom_bad.png"
 image keep butt = "cutscene_keep_good.png"
 image nokeep butt = "cutscene_return_good.png"
+image bad end 1 = "cutscene_badend_1.png"
+image bad end 2 = "cutscene_badend_2.png"
 image endscreen = "EndScreen.png"
 
 # Declaring sprite names.
@@ -833,6 +835,8 @@ label start:
         
         b "Humanity has been cast aside and now fights for scraps. I could have been a hero...maybe, but now I never will."
 
+        scene bad end 1
+
         b "Oh hey Bubbleigh is streaming! Sweet."
 
         play sound p_omg volume 2.0
@@ -841,6 +845,8 @@ label start:
         p1 "Oh dear god, the acid demons are back!!"
 
         p2 "Get inside! The Arcadian de-molecular squads are here."
+
+        scene bad end 2
 
         p1 "It's all because of that big ass kid. I'll never look at a butt ever again!"
         
